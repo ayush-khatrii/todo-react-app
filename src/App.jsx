@@ -70,9 +70,9 @@ const App = () => {
 
 	return (
 		<>
-			<div className='m-10'>
-				<h1 className='text-center font-extrabold text-zinc-300 text-3xl my-10'>
-					Todo.<span className='text-zinc-600 '>It</span>
+			<div className='m-10 h-screen'>
+				<h1 className='text-center  font-extrabold text-zinc-300 text-3xl my-10'>
+					Todo<span className='text-zinc-600 '>Ez</span>
 				</h1>
 				<form
 					className='flex justify-center items-start max-w-xl mx-auto'
@@ -82,7 +82,7 @@ const App = () => {
 						value={inputVal}
 						type='text'
 						required
-						className='lg:w-full wplaceholder:text-zinc-600 text-zinc-50 w-full mb-10 outline-none rounded mx-3 pl-2 py-2 bg-zinc-800'
+						className='lg:w-full placeholder:text-zinc-600 text-zinc-50 w-full mb-10 outline-none rounded mx-3 pl-2 py-2 bg-zinc-800'
 						placeholder='Buy bread from market'
 						onChange={(e) => setInputVal(e.target.value)}
 					/>
