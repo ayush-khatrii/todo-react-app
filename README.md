@@ -1,8 +1,16 @@
-# React + Vite
+# TodoEz
+![TodoEz](https://github.com/ayush-khatrii/todo-react-app/blob/main/public/todo.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TodoEz is a simple and intuitive todo list application built with React. It allows users to easily add, delete, and mark tasks as completed.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks with a timestamp indicating when they were created.
+- Mark tasks as completed with a checkbox.
+- View active todos and completed todos separately.
+- Delete tasks from the list.
+
+## Technologies Used
+
+- React
+- Local storage for data persistence
