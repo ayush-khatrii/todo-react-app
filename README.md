@@ -1,6 +1,4 @@
 # TodoEz
-![TodoEz](https://github.com/ayush-khatrii/todo-react-app/blob/main/public/todo.png)
-
 TodoEz is a simple and intuitive todo list application built with React. It allows users to easily add, delete, and mark tasks as completed.
 
 ## Features
