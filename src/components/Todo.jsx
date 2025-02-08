@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { CheckCircle, Circle, Trash2, Plus } from "lucide-react";
+import { CheckCircle, Circle, Trash2, Plus, Copy } from "lucide-react";
 
 const Todo = () => {
   const [todo, setTodo] = useState([]);
@@ -58,6 +58,11 @@ const Todo = () => {
       localStorage.setItem("todo", JSON.stringify([...newTodos, updatedTodo, ...completedTodos]));
     }
   };
+
+  const handleCopy = (value) => {
+    navigator.clipboard.writeText(value);
+    alert("Copied!");
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
@@ -127,9 +132,14 @@ const Todo = () => {
               todo.map((item) => (
                 <div
                   key={item.id}
-                  className="group bg-zinc-900 overflow-auto border border-zinc-800 rounded-lg p-4 transition-all hover:border-indigo-500/20"
+                  className="group relative bg-zinc-900 overflow-auto border border-zinc-800 rounded-lg p-4 transition-all hover:border-indigo-500/20"
                 >
                   <div className="flex items-start gap-4">
+                    <button
+                      onClick={() => handleCopy(item.inputVal)}
+                      className="bg-zinc-700 hover:bg-zinc-900 transition-all ease-in-out duration-200 px-3 py-2 rounded-md absolute right-4">
+                      <Copy color="white" size="15" />
+                    </button>
                     <button
                       onClick={() => handleComplete(item.id)}
                       className="mt-1 text-gray-600 hover:text-indigo-500 transition-opacity"
@@ -137,7 +147,9 @@ const Todo = () => {
                       <Circle size={20} />
                     </button>
                     <div className="flex-1 min-w-0">
-                      <p className="text-white font-medium">{item.inputVal}</p>
+                      <pre className="text-white font-medium">
+                        {item.inputVal}
+                      </pre>
                       <p className="text-sm text-gray-600 mt-1">{item.createdAt}</p>
                     </div>
                   </div>
